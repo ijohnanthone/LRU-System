@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.simulation-box {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.frame-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.frame {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.frame.active {
+    background-color: #4caf50; /* Green for successful access */
+}
+
+.frame.fault {
+    background-color: #ff6b6b; /* Red for page fault */
+}
+
+.frame.empty {
+    background-color: #ccc;
+    color: #666;
+}
+
+.frame.highlight {
+    animation: highlight 0.5s ease;
+}
+
+@keyframes highlight {
+    0% { background-color: #ff6b6b; }
+    50% { background-color: #fff; }
+    100% { background-color: #333; }
+}
+
+.animation-container {
+    margin-top: 20px;
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.table-container {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-container th {
+    background-color: #f4f4f9;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.results-container {
+    margin-top: 20px;
+}
+
+.success, .failure {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.failure {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    margin-right: 10px;
+}
+
+.summary {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
