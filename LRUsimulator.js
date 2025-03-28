@@ -1,4 +1,4 @@
-var simulationInterval;
+var simulationInterval; 
 var currentPageIndex = 0;
 var isPaused = false;
 
