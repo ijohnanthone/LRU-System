@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Page Replacement Simulation</title>
+    <link rel="stylesheet" href="LRUsimulator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LRU Page Replacement Simulation</h1>
+        <div class="input-container">
+            <label for="pageSequence">Enter Page Sequence:</label>
+            <input type="text" id="pageSequence" placeholder="e.g., 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1">
+            <button onclick="startSimulation()">Start Simulation</button>
+        </div>
+        <div class="simulation-box">
+            <div class="frame-container" id="frameContainer"></div>
+            <div class="animation-container" id="animationContainer"></div>
+            <div class="table-container">
+                <table id="simulationTable">
+                    <thead>
+                        <tr><th>Memory Frames</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="results-container">
+                <div class="success" id="successCount">Successful Page Accesses: 0</div>
+                <div class="failure" id="failureCount">Page Faults: 0</div>
+            </div>
+            <div class="controls">
+                <button onclick="pauseSimulation()">Pause</button>
+                <button onclick="resumeSimulation()">Resume</button>
+                <button onclick="resetSimulation()">Reset</button>
+            </div>
+            <div class="summary" id="summary" style="display: none;">
+                <h3>Summary</h3>
+                <p id="finalSuccessCount"></p>
+                <p id="finalFailureCount"></p>
+            </div>
+        </div>
+    </div>
+    <script src="LRUsimulator.js"></script>
+</body>
+</html>
